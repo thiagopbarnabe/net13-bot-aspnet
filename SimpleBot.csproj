@@ -137,9 +137,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\IUserProfileRepository.cs" />
     <Compile Include="Logic\Message.cs" />
     <Compile Include="Logic\SimpleBotUser.cs" />
+    <Compile Include="Logic\UserProfileMongo.cs" />
     <Compile Include="Logic\UserProfile.cs" />
+    <Compile Include="Logic\UserProfileMemRepo.cs" />
+    <Compile Include="Logic\UserProfileMongoRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

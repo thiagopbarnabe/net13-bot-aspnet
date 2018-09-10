@@ -27,7 +27,7 @@ namespace SimpleBot
 
             return $"{message.User} disse '{message.Text} e mandou {profile.Visitas} mensagens'";
         }
-
+            
         //public static void SalvarHistorico(Message message)
         //{
         //    var client = new MongoClient("mongodb://localhost:27017");
