@@ -12,7 +12,8 @@ namespace SimpleBot
 
         static SimpleBotUser()
         {
-            _userProfile = new UserProfileMongoRepo("mongodb://127.0.0.1");
+            //_userProfile = new UserProfileMongoRepo("mongodb://127.0.0.1");
+            _userProfile = new UserProfileSqlRepo("Server=localhost;Database=ProfileDB;Integrated Security= true;");
         }
 
         public static string Reply(Message message)
@@ -20,6 +21,9 @@ namespace SimpleBot
             var id = message.Id;
 
             var profile = _userProfile.GetProfile(id);
+
+            if (profile == null)
+                profile = new UserProfile { Id = id, Visitas = 0 };
 
             profile.Visitas += 1;
 
