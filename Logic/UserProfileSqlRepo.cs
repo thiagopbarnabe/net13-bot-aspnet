@@ -38,7 +38,8 @@ namespace SimpleBot.Logic
             UserProfile p = GetProfile(id);
             if (p!=null)
             {
-                db.Execute("update UserProfile set Visitas=@Visitas where Id=@id", new { id = id, Visitas = p.Visitas});
+                // pequeno bug
+                db.Execute("update UserProfile set Visitas=@Visitas where Id=@id", new { id = id, Visitas = profile.Visitas});
             }
             else
             {
